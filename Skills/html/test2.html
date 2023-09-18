@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Menu Example</title>
+    <style>
+        /* Basic menu styles */
+        ul.menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            height: 50px;
+        }
+
+        ul.menu li {
+            padding-top: 10px;
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        ul.menu li:last-child {
+            margin-right: 0; /* Remove margin from the last item */
+        }
+
+        ul.menu li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        ul.menu li a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</body>
+</html>

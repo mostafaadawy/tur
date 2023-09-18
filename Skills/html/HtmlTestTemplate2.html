@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geolocation Example</title>
+</head>
+<body>
+    <h1>Geolocation Example</h1>
+
+    <p>Click the button below to get your current location:</p>
+    
+    <button onclick="getLocation()">Get Location</button>
+
+    <p id="location"></p>
+
+    <script>
+        function getLocation() {
+            if ("geolocation" in navigator) {
+                // Geolocation is available
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var latitude = position.coords.latitude;
+                    var longitude = position.coords.longitude;
+
+                    document.getElementById("location").innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
+                });
+            } else {
+                // Geolocation is not available
+                document.getElementById("location").innerHTML = "Geolocation is not supported by your browser.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .accordion input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+    }
+
+    .accordion label {
+      display: block;
+      padding: 10px 20px;
+      background-color: #f0f0f0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion label:hover {
+      background-color: #e0e0e0;
+    }
+
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    input[type="radio"]:checked + label + .content {
+      max-height: 1000px; /* Use a large value to ensure full expansion */
+    }
+  </style>
+</head>
+<body>
+  <div class="accordion">
+    <input type="radio" id="section1" name="accordion" checked>
+    <label for="section1">Section 1</label>
+    <div class="content">
+      <p>This is the content of Section 1.</p>
+    </div>
+
+    <input type="radio" id="section2" name="accordion">
+    <label for="section2">Section 2</label>
+    <div class="content">
+      <p>This is the content of Section 2.</p>
+    </div>
+  </div>
+</body>
+</html>

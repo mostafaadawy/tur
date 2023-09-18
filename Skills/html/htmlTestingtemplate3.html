@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scrolling Animation</title>
+    <style>
+        .scrolling-text {
+            white-space: nowrap;
+            overflow: hidden;
+            animation: scroll 5s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <font color="Green">This by font</font>
+    <div class="scrolling-text">This is scrolling text created with CSS animation.</div>
+    <marquee direction="left" behavior="scroll" scrollamount="10">This is scrolling text by marquee></marquee>
+
+</body>
+</html>
